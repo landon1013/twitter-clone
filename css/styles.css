@@ -168,6 +168,7 @@ body {
 
 	.tweet-actions {
 		text-align: right;
+        display: none;
 	}
 		.tweet-actions ul {
 			list-style-type: none;
@@ -180,6 +181,10 @@ body {
 				margin-right: 2px;
 			}
 
+            .tweet:hover .tweet-actions {
+                display: block;
+            }
+
 	.icon {
 		color: #2FC2EF;
 		background-color: #2FC2EF;
@@ -190,7 +195,6 @@ body {
 		background-repeat: no-repeat;
 		background-image: url(https://abs.twimg.com/a/1379560497/t1/img/twitter_web_sprite_icons.png);
 	}
-
 	.action-reply {
 		background-position: 0 -190px;
 	}
@@ -215,6 +219,8 @@ body {
 		.stats, .stats div {
 			box-sizing: border-box;
 		}
+
+
 		.num-retweets, .num-favorites {
 			font-weight: bold;
 			font-size: 14px;
@@ -258,5 +264,6 @@ body {
 				top: 0;
 				left: 0;
 			}
+
 
 
