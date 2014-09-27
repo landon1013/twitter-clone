@@ -5,8 +5,8 @@ $(document).ready(function(){
     $(".reply").hide();
 
     $("#stream").on("click", ".tweet", function(){
-        $(this).find(".stats").show();
-        $(this).find(".reply").show();
+        $(this).find(".stats").slideToggle({duration: 600});
+        $(this).find(".reply").slideToggle({duration: 600});
     });
 
     $(".tweet-compose").on("click", function() {
@@ -46,10 +46,13 @@ $(document).ready(function(){
             el.find(".tweet-text").html($(".tweet-compose").val());
             el.find(".tweet-text").html();
             $("#stream").prepend(el);
+            $(".tweet:first").find(".stats").hide();
+            $(".tweet:first").find(".reply").hide();
+            $(".tweet-compose").css("height", "2.5em");
+            $("#tweet-controls").hide();
+            $(".tweet-compose").val("");
 
         //$("#stream").prepend(".tweet-compose.val()");
     });
-
-
 
 });
